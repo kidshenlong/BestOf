@@ -14,3 +14,9 @@
 $app->get('/', function() use ($app) {
     return $app->welcome();
 });
+
+$app->get('album', 'App\Http\Controllers\AlbumsController@index');
+$app->get('album/{id}', 'App\Http\Controllers\AlbumsController@show');
+
+$app->get('artist', 'App\Http\Controllers\ArtistsController@index');
+$app->get('artist/{id}', 'App\Http\Controllers\ArtistsController@show');
