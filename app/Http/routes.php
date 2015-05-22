@@ -15,6 +15,9 @@ $app->get('/', function() use ($app) {
     return $app->welcome();
 });
 
+$app->get('genre', 'App\Http\Controllers\GenreController@index');
+$app->get('genre/{id}', 'App\Http\Controllers\GenreController@show');
+
 $app->get('album', 'App\Http\Controllers\AlbumsController@index');
 $app->get('album/{id}', 'App\Http\Controllers\AlbumsController@show');
 

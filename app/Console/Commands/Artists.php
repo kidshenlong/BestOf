@@ -23,7 +23,7 @@ class Artists extends Command {
         //$this->comment('yo');
         //$lastfm = new LastFm( $lastfm_api_key, $lastfm_api_secret );
 
-        Artist::create(['name' => 'John']);
+        Artist::create(['name' => 'Steve']);
         //$this->comment('yo');
         //return Artist::all();
     }

@@ -6,18 +6,19 @@
  * Time: 11:09
  */
 
-use App\Album;
 
-class AlbumsController extends ApiController
+use App\Genre;
+
+class GenreController extends ApiController
 {
 
     public function index()
     {
-        return Album::with('artist')->get();
+        return Genre::with('albums')->get();
     }
 
     public function show($id)
     {
-        return Album::find($id)->with('artist')->get();
+        return Genre::find($id)->with('albums')->get();
     }
 }

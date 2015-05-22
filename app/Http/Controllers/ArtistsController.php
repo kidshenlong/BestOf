@@ -14,12 +14,11 @@ class ArtistsController extends ApiController
 
     public function index()
     {
-        return Artist::all();
-        //return Artist::with('album')->get();
+        return Artist::with('albums')->get();
     }
 
     public function show($id)
     {
-        return Artist::find($id)->albums;//->with('album')->get();
+        return Artist::find($id)->with('albums')->get();
     }
 }
